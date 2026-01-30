@@ -1,0 +1,146 @@
+/* นำเข้าฟอนต์ภาษาไทยจาก Google Fonts เพื่อความสวยงาม */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap');
+
+/* ตั้งค่าพื้นฐาน */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #f4f7f6; /* สีพื้นหลังโทนสบายตา */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* กล่องคอนเทนเนอร์หลัก */
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px; /* จำกัดความกว้างไม่ให้ยืดเกินไป */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* เงาให้ดูมีมิติ */
+}
+
+/* หัวข้อแบบฟอร์ม */
+.header {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* จัดการ Layout แบบ Flexbox */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* การจัดระยะห่างระหว่างกลุ่มข้อมูล */
+.form-input {
+    margin-bottom: 15px;
+}
+
+/* ส่วน Label หน้าช่องกรอก (ชื่อ, นามสกุล, อายุ) */
+.header-form {
+    width: 80px; /* กำหนดความกว้างคงที่เพื่อให้ช่องกรอกตรงกัน */
+    font-weight: 500;
+    flex-shrink: 0; /* ไม่ให้หดตัว */
+}
+
+/* ช่องกรอกข้อมูล (Input) */
+.form {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+/* เปลี่ยนสีขอบเมื่อกดพิมพ์ */
+.form:focus, textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+}
+
+/* ส่วนเพศ (Gender) */
+.gender .flex > div {
+    margin-right: 15px; /* ระยะห่างระหว่างตัวเลือกเพศ */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.gender input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* ส่วนงานอดิเรก Checkbox */
+.form-input input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1); /* ขยายขนาด Checkbox นิดหน่อย */
+    cursor: pointer;
+}
+
+/* จัดระยะห่างบรรทัดของงานอดิเรก */
+.form-input div {
+    margin-top: 5px;
+    color: #555;
+}
+
+/* ช่องคำอธิบาย (Textarea) */
+textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Prompt', sans-serif;
+    resize: vertical; /* ให้ยืดหดได้แค่แนวตั้ง */
+    margin-top: 5px;
+}
+
+/* จัดปุ่มให้อยู่ตรงกลาง */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* ปุ่มส่งข้อมูล */
+.button {
+    background-color: #28a745; /* สีเขียว */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 50px; /* ปุ่มมน */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    font-family: 'Prompt', sans-serif;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* เอฟเฟกต์ตอนเอาเมาส์ชี้และกดปุ่ม */
+.button:hover {
+    background-color: #218838;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
