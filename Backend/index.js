@@ -2,6 +2,9 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const mysql = require('mysql2/promise');
 const app = express();
+const cors = require('cors');
+
+app.use(cors());
 
 app.use(bodyParser.json());
 
